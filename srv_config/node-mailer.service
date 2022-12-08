@@ -1,0 +1,17 @@
+[Unit]
+Description=smtp service for sanding emails from site
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /var/server/inc-mailer/index.js
+WorkingDirectory=/var/server/inc-mailer
+Restart=on-failure
+RestartSec=10s
+User=nodemailer
+Group=nodemailer
+UMask=077
+Environment=NODE_ENV=production PORT 3010
+
+[Install]
+WantedBy=multi-user.target
