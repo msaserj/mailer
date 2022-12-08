@@ -4,7 +4,7 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 const app = express()
 const port = 3010
-import pswd from "./pass"
+
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -17,7 +17,7 @@ let transporter = nodemailer.createTransport({
     },
     auth: {
         user: "serg.ks@gmail.com", // generated ethereal user
-        pass: pswd, // generated ethereal password
+        pass: "", // generated ethereal password
     },
 });
 
@@ -29,25 +29,24 @@ app.use(bodyParser.urlencoded({extended: false}))
 // parse application/json
 app.use(bodyParser.json())
 
-app.post('/SendMessage', (req, res) => {
-
+app.post('/sendmessage', async (req, res) => {
     let {name, email, subj, message} = req.body
-    res.send('Hello World!')
+
 
     // send mail with defined transport object
-    let info = transporter.sendMail({
+    let info = await transporter.sendMail({
         from: "testSender", // sender address
         to: "serg.ks@gmail.com", // list of receivers
-        subject: subj, // Subject line
+        subject: "From my site: " + subj, // Subject line
         text: "Hello world?", // plain text body
         html: `<div>
-                    <h1>Hello world?</h1>
-                    <h3>${name}</h3>
-                    <h3>${email}</h3>
-                    <p>${message}</p>
+                    <h1>From my site</h1>
+                    <h2><strong>Name:</strong> ${name? name : ""}</h2>
+                    <h2><strong>Email:</strong> ${email? email : ""}</h2>
+                    <h3><strong>Message:</strong> ${message? message: ""}</h3>
                 </div>`, // html body
     });
-
+    res.send('Sanded!')
 })
 
 app.listen(port, () => {
