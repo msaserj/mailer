@@ -17,7 +17,7 @@ let transporter = nodemailer.createTransport({
     },
     auth: {
         user: "serg.ks@gmail.com", // generated ethereal user
-        pass: "wvbmzxhsbxzlbyii", // generated ethereal password
+        pass: "your psswd", // generated ethereal password
     },
 });
 
