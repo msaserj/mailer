@@ -35,11 +35,11 @@
 
 **A simple email client with an endpoint for sending email messages through a single HTML.**
 
-<p align="center"><img src="./screen.png" width="80%"></p>
+<p align="center"><img src="./screen.png" width="50%"></p>
 
 **An example of what this looks like in an email message.**
 
-<p align="center"><img src="./mail_screen.png" width="80%"></p>
+<p align="center"><img src="./mail_screen.png" width="50%"></p>
 
 ## About the project.
 
