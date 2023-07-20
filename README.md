@@ -11,7 +11,7 @@
 
 <img src="https://img.shields.io/badge/made%20by-msaserj-red.svg" >
 
-<img src="https://img.shields.io/github/stars/msaserj/inc-mailer.svg?style=flat">
+<img src="https://img.shields.io/github/stars/msaserj/mailer.svg?style=flat">
 
 <img src="https://img.shields.io/badge/NodeJS-16.18.1-green.svg">
 
@@ -19,9 +19,9 @@
 
 <img src="https://img.shields.io/badge/Nodemailer-6.8.0-green.svg">
 
-<img src="https://img.shields.io/github/languages/count/msaserj/inc-mailer">
+<img src="https://img.shields.io/github/languages/count/msaserj/mailer">
 
-<img src="https://img.shields.io/github/languages/top/msaserj/inc-mailer.svg">
+<img src="https://img.shields.io/github/languages/top/msaserj/mailer.svg">
 
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
 
