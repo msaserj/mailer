@@ -5,7 +5,6 @@ const bodyParser = require("body-parser")
 const app = express()
 const port = 3010
 
-
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
     service: "gmail",
